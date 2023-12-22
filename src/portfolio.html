@@ -4,81 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hiwot's portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="dist/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CRaleway:300,300i,400,400i,500,500i,600,600i,700,700i%7CPoppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 </head>
 <body>
     <!--header-->
-    <header id="header" class="fixed">
-      <div class="h-section ">
-          <nav class="navbar center">
-              <ul>
-                  <li><a  href="index.html">Home</a></li>
-                  <li><a  href="about.html">About</a></li>
-                  <li><a  href="resume.html">Resume</a></li>
-                  <li><a class='active' href="portfolio.html">Portfolio</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-              </ul>
+    <header class="header fixed top-0 left-0 right-0 bg-pink-100 shadow-lg py-3 ">
+      <div class="flex items-center justify-end px-4 py-6 text-xl">
+        <nav class="hidden md:block mx-auto">
+          
+            <ul id="navbarList" class="flex space-x-5 mx-auto">
+              <li class="header__navbar-list">
+                <a class="header__navbar-link  hover:text-pink-600" href="index.html">Home</a>
+              </li>
+              <li class="header__navbar-list">
+                <a class="header__navbar-link   hover:text-pink-600" href="about.html">About</a>
+              </li>
+              <li class="header__navbar-list">
+                <a class="header__navbar-link  hover:text-pink-600" href="resume.html">Resume</a>
+              </li>
+              <li class="header__navbar-list">
+                <a class="header__navbar-link text-pink-600 font-bold hover:text-pink-600" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="header__navbar-list">
+                <a class="header__navbar-link hover:text-pink-600" href="contact.html">Contact</a>
+              </li>
+            </ul>
           </nav>
-          <!--social-media links-->
-          <div class="header-social-links">
-              <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-              <a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a>
-              <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-          </div>
+        
+        <!--social-media links-->
+        <div class="header__media-icons flex ">
+          <a class="header__media-icons-link mr-2" href="https://twitter.com/HiwotAddis8917">
+            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+          </a>
+          <a class="header__media-icons-link mr-2" href="https://t.me/newlife_1010">
+            <i class="fa fa-telegram" aria-hidden="true"></i>
+          </a>
+          <a class="header__media-icons-link mr-2" href="https://www.linkedin.com/in/hiwot-addis-453139286/">
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          </a>
+          <a class="header__media-icons-link navbar-burger md:hidden" onclick="toggleNavbar()">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div id="myLinks" class="hidden">
+          <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0  text-black  hover:text-pink-600 mr-4">
+              Home
+          </a>
+          <a href="about.html" class="block mt-4 lg:inline-block lg:mt-0  text-black hover:text-pink-600 mr-4">
+              About
+          </a>
+          <a href="resume.html" class="block mt-4 lg:inline-block lg:mt-0  text-black hover:text-pink-600 mr-4">
+              Resume
+          </a>
+          <a href="portfolio.html" class="block mt-4 lg:inline-block lg:mt-0 text-pink-600 font-bold hover:text-pink-600 mr-4">
+              Portfolio
+          </a>
+          <a href="contact.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-pink-400">
+              Contact
+          </a>
         </div>
     </header>
     <!--main-->
-    <main>
-        <h2>Portfolio</h2>
-        <q cite="https://www.goodreads.com/quotes/772887-the-only-way-to-do-great-work-is-to-love">
+    <main class="flex flex-col items-center pt-8  min-h-screen">
+        <h2 class="text-center pt-10 text-4xl font-bold uppercase mt-10 ">Portfolio</h2>
+        <q class="font-italic text-center" cite="https://www.goodreads.com/quotes/772887-the-only-way-to-do-great-work-is-to-love">
           The only way to do great work is to love what you do.<br><em>- Steve Jobs</em>
         </q>
-        <p>Welcome to my portfolio section. Here you can find my past works and projects. I hope you enjoy browsing through them.</p>
-        <div>
-            <ul>
-                <li>All</li>
-                <li>UI/UX</li>
-                <li>Web</li>
+        <p class="text-center mt-6">Welcome to my portfolio section. Here you can find my past works and projects. I hope you enjoy browsing through them.</p>
+        <div class="flex mt-8">
+            <ul class="flex">
+                <li class="mr-2 text-pink-600 ">All</li>
+                <li class="mr-2 text-pink-600 ">UI/UX</li>
+                <li class="mr-2 text-pink-600 ">Web</li>
             </ul>
-          </div>
-
-        <div>
-          <section>
-            <figure>
-              <a href="https://www.apple.com/"><img src="images/applepage.png"  alt="" ></a>
-              <figcaption><h5>Apple page</h5></figcaption>
-            </figure>
-            <figure>
-              <a href="portfolio-section-projects/puppy-page/puppy.html"><img src="images/puppy-lovers-page-design.jpg" " alt=""></a>
-              <figcaption><h5>Puppy page</h5></figcaption>
-            </figure>
-            <figure>
-              <a href="https://www.figma.com/file/Pf9fGOGKeA9E6seM3Nito9/own-page?type=design&mode=design&t=1kesSMkd1ws4VPka-1"><img src="images/ownpage.png"  alt=""></a>
-              <figcaption><h5>coffee menu design</h5></figcaption>
-            </figure>
-          </section>
-          <section>
-            <figure>
-              <a href="https://www.figma.com/file/UtrnR0VUP2vpBwN73JIpqm/Untitled?type=design&mode=design&t=1kesSMkd1ws4VPka-1"><img src="images/sport.png"  alt="" ></a>
-              <figcaption><h5>boxchampy</h5></figcaption>
-            </figure>
-            <figure>
-              <a href="https://www.southernmostbeachresort.com/dine/southernmost-beach-cafe/"><img src="images/sothermost-resourt.png"  alt=""></a>
-              <figcaption><h5>southernmost-beach-cafe</h5></figcaption>
-            </figure>
-            <figure>
-              <a href="https://www.figma.com/file/RTv8BcpsFLHaVrHFPoyLjk/NoStock-login-page-challenge?type=design&mode=design&t=1kesSMkd1ws4VPka-1"><img src="images/loginpage.png" alt=""></a>
-              <figcaption><h5>login page</h5></figcaption>
-            </figure>
-          </section>
         </div>
-        
+
+        <div class="px-1">
+          <div class="flex flex-wrap pr-10 pl-10">
+              <figure class="w-full  md:w-1/3 p-2">
+                  <a href="https://www.apple.com/">
+                      <img class="w-full" src="images/applepage.png" alt="">
+                  </a>
+                  <figcaption class="subtitle text-center text-sm text-pink-700 font-bold">Web: Apple page</figcaption>
+              </figure>
+              <figure class="w-full  md:w-1/3 p-2">
+                  <a href="images/puppy-lovers-page-design.jpg">
+                      <img class="w-full" src="images/puppy-lovers-page-design.jpg" alt="">
+                  </a>
+                  <figcaption class="subtitle text-center text-sm text-pink-700 font-bold">Web: Puppy page</figcaption>
+              </figure>
+              <figure class="w-full  md:w-1/3 p-2">
+                  <a href="https://www.figma.com/file/Pf9fGOGKeA9E6seM3Nito9/own-page?type=design&mode=design&t=1kesSMkd1ws4VPka-1">
+                      <img class="w-full" src="images/ownpage.png" alt="">
+                  </a>
+                  <figcaption class="subtitle text-center text-sm text-pink-700 font-bold">UI/UX: Coffee menu design</figcaption>
+              </figure>
+              <figure class="w-full  md:w-1/3 p-2">
+                  <a href="https://www.figma.com/file/UtrnR0VUP2vpBwN73JIpqm/Untitled?type=design&mode=design&t=1kesSMkd1ws4VPka-1">
+                      <img class="w-full" src="images/sport.png" alt="">
+                  </a>
+                  <figcaption class="subtitle text-center text-sm text-pink-700 font-bold">UI/UX: Boxchampy</figcaption>
+              </figure>
+              <figure class="w-full  md:w-1/3 p-2">
+                  <a href="https://www.southernmostbeachresort.com/dine/southernmost-beach-cafe/">
+                      <img class="w-full" src="images/sothermost-resourt.png" alt="">
+                  </a>
+                  <figcaption class="subtitle text-center text-sm text-pink-700 font-bold">UI/UX: Southernmost Beach Cafe</figcaption>
+              </figure>
+              <figure class="w-full  md:w-1/3 p-2">
+                  <a href="https://www.figma.com/file/RTv8BcpsFLHaVrHFPoyLjk/NoStock-login-page-challenge?type=design&mode=design&t=1kesSMkd1ws4VPka-1">
+                      <img class="w-full" src="images/loginpage.png" alt="">
+                  </a>
+                  <figcaption class="subtitle text-center text-sm text-pink-700 font-bold">UI/UX: NoStock Login Page Challenge</figcaption>
+              </figure>
+          </div>
+      </div>
     </main>
     <!--footer-->
-    <footer>
-        <p>&copy; Copyright <strong><span>Hiwot</span></strong>. All Rights Reserved</p>
+    <footer class="py-4 bg-pink-100">
+      <div class=" text-center py-6">
+        <p  class="text-gray-700">&copy; Copyright 2023 <strong class="has-text-white">Hiwot</strong>. All Rights Reserved.</p>
+      </div>
     </footer>
+<script src="javascript/script.js"></script>
 </body>
+
 </html>

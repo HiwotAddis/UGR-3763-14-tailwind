@@ -1,49 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hiwot's portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="dist/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CRaleway:300,300i,400,400i,500,500i,600,600i,700,700i%7CPoppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 </head>
+
 <body>
     <!--header-->
-    <header id="header" class="fixed">
-        <div class="h-section">
-            <nav class="navbar center">
-                <ul>
-                    <li><a class='active' href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <!--social-media links-->
-            <div class="header-social-links">
-                <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-            </div>
-        </div>
+    <header class="header fixed top-0 left-0 right-0 bg-pink-100 shadow-lg py-3 ">
+      <div class="flex items-center justify-end  px-4 py-6 text-xl">
+        <nav class="hidden md:block mx-auto">
+          
+            <ul id="navbarList" class="flex space-x-5 mx-auto">
+              <li class="header__navbar-list">
+                <a class="header__navbar-link text-pink-600 font-bold hover:text-pink-600" href="index.html">Home</a>
+              </li>
+              <li class="header__navbar-list">
+                <a class="header__navbar-link hover:text-pink-600" href="about.html">About</a>
+              </li>
+              <li class="header__navbar-list">
+                <a class="header__navbar-link hover:text-pink-600" href="resume.html">Resume</a>
+              </li>
+              <li class="header__navbar-list">
+                <a class="header__navbar-link hover:text-pink-600" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="header__navbar-list">
+                <a class="header__navbar-link hover:text-pink-600" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </nav>
         
+        <!--social-media links-->
+        <div class="header__media-icons flex  ">
+          <a class="header__media-icons-link mr-2" href="https://twitter.com/HiwotAddis8917">
+            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+          </a>
+          <a class="header__media-icons-link mr-2" href="https://t.me/newlife_1010">
+            <i class="fa fa-telegram" aria-hidden="true"></i>
+          </a>
+          <a class="header__media-icons-link mr-2" href="https://www.linkedin.com/in/hiwot-addis-453139286/">
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          </a>
+          <a class="header__media-icons-link navbar-burger md:hidden" onclick="toggleNavbar()">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div id="myLinks" class="hidden">
+          <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0  text-pink-600 font-bold hover:text-pink-600 mr-4">
+              Home
+          </a>
+          <a href="about.html" class="block mt-4 lg:inline-block lg:mt-0  text-black hover:text-pink-600 mr-4">
+              About
+          </a>
+          <a href="resume.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-pink-600 mr-4">
+              Resume
+          </a>
+          <a href="portfolio.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-pink-600 mr-4">
+              Portfolio
+          </a>
+          <a href="contact.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-pink-400">
+              Contact
+          </a>
+        </div>
     </header>
-    <!--main-->
-    <section id="Hiwot" >
-        <div>
-            <h1>Hiwot Addis</h1>
-            <h2>I'm a Software Engineer and UI/UX Designer.</h2>
-            <a href="about.html" class="about-button">About Me</a>
-        </div>  
-    </section>
+   
     
+
+    <!--main-->
+    <section class="hiwot bg-cover bg-no-repeat bg-right" style="background-image: url(images/minebackground.bmp)">
+        <div class="hiwot__content flex flex-col justify-center items-center h-screen">
+            <h1 class="hiwot__title text-6xl border-l-black font-bold font-serif text-center text-gray-600">Hiwot Addis</h1>
+            <h2 class="hiwot__subtitle font-serif font-normal text-5xl text-center text-pink-500">I'm a Software Engineer and UI/UX Designer.</h2>
+            <a href="about.html" class=" mt-6 text-white bg-pink-600 py-3 px-6 rounded-full uppercase font-semibold text-md">About Me</a>
+        </div>
+    </section>
+
     <!--footer-->
-    <footer id="footer">
-        <div>
-            <p>&copy; Copyright <strong><span>Hiwot</span></strong>. All Rights Reserved</p>
+    <footer class="footer bg-pink-100 shadow py-6">
+        <div class="text-center py-6">
+            <p class="text-gray-600">&copy; Copyright 2023
+                <strong>Hiwot</strong>. All Rights Reserved.
+            </p>
         </div>
     </footer>
+
+    <script src="javascript/script.js"></script>
 </body>
+
+
 </html>

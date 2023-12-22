@@ -1,83 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact Hiwot</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="dist/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CRaleway:300,300i,400,400i,500,500i,600,600i,700,700i%7CPoppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 </head>
+
 <body>
-    <header id="header" class="fixed">
-        <div class="h-section ">
-            <nav class="navbar center">
-                <ul>
-                    <li><a  href="index.html">Home</a></li>
-                    <li><a  href="about.html">About</a></li>
-                    <li><a  href="resume.html">Resume</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a class='active' href="contact.html">Contact</a></li>
-                </ul>
+    <header class="header fixed top-0 left-0 right-0 bg-pink-100 shadow-lg py-3 ">
+        <div class="flex items-center justify-end px-4 py-6 text-xl">
+          <nav class="hidden md:block mx-auto">
+            
+              <ul id="navbarList" class="flex space-x-5 mx-auto">
+                <li class="header__navbar-list">
+                  <a class="header__navbar-link  hover:text-pink-600" href="index.html">Home</a>
+                </li>
+                <li class="header__navbar-list">
+                  <a class="header__navbar-link   hover:text-pink-600" href="about.html">About</a>
+                </li>
+                <li class="header__navbar-list">
+                  <a class="header__navbar-link  hover:text-pink-600" href="resume.html">Resume</a>
+                </li>
+                <li class="header__navbar-list">
+                  <a class="header__navbar-link  hover:text-pink-600" href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="header__navbar-list">
+                  <a class="header__navbar-link text-pink-600 font-bold hover:text-pink-600" href="contact.html">Contact</a>
+                </li>
+              </ul>
             </nav>
-            <!--social-media links-->
-            <div class="header-social-links">
-                <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+          
+          <!--social-media links-->
+          <div class="header__media-icons flex ">
+            <a class="header__media-icons-link mr-2" href="https://twitter.com/HiwotAddis8917">
+              <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            </a>
+            <a class="header__media-icons-link mr-2" href="https://t.me/newlife_1010">
+              <i class="fa fa-telegram" aria-hidden="true"></i>
+            </a>
+            <a class="header__media-icons-link mr-2" href="https://www.linkedin.com/in/hiwot-addis-453139286/">
+              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </a>
+            <a class="header__media-icons-link navbar-burger md:hidden" onclick="toggleNavbar()">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div id="myLinks" class="hidden">
+            <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0  text-black  hover:text-pink-600 mr-4">
+                Home
+            </a>
+            <a href="about.html" class="block mt-4 lg:inline-block lg:mt-0  text-black hover:text-pink-600 mr-4">
+                About
+            </a>
+            <a href="resume.html" class="block mt-4 lg:inline-block lg:mt-0  text-black hover:text-pink-600 mr-4">
+                Resume
+            </a>
+            <a href="portfolio.html" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-pink-600 mr-4">
+                Portfolio
+            </a>
+            <a href="contact.html" class="block mt-4 lg:inline-block lg:mt-0 text-pink-600 font-bold hover:text-pink-400">
+                Contact
+            </a>
+          </div>
+      </header>
+    <div class="container mx-auto pt-16 mb-10 flex flex-col min-h-screen">
+        <h2 class="text-center pt-10 text-4xl font-bold uppercase mt-10 ">Contact </h2>
+        <div class="flex flex-wrap -mx-2 w-full mt-6 pt-16">
+            <div class="md:w-1/2  w-full p-4 ">
+                <div class="bg-white  p-5 shadow-lg">
+                    <div class="location mb-5 ">
+                        <h4 class="font-semibold"><i class="fa fa-map-marker  m-4 text-pink-600" aria-hidden="true"></i> Location:</h4>
+                        <p>2R2J+M5H, Goro, Ethiopia</p>
+                    </div>
+                    <div class=" mb-5">
+                        <h4 class="font-semibold"><i class="fa fa-envelope-o  m-4 text-pink-600 " aria-hidden="true"></i> Email:</h4>
+                        <p>addishiwot963@gmail.com</p>
+                    </div>
+                    <div class="call mb-5">
+                        <h4 class="font-semibold"><i class="fa fa-mobile  m-4 text-pink-600" aria-hidden="true"></i> Call:</h4>
+                        <p>+251 961 256116</p>
+                    </div>
+                    <div class="iframe-container  pb-2.25% w-full h-20 ">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1575.9551525801999!2d38.82808179196432!3d9.000525399929563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b9b6053e87c49%3A0x5752c9d2f249c0ce!2sAbel%20wood%20and%20metal%20manufacturing!5e0!3m2!1sen!2sus!4v1700834094906!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" class=" top-0 left-0 w-full h-full"></iframe>
+                    </div>
+                </div>
+                
             </div>
+            <div class="w-full md:w-1/2 p-4 ">
+                <div class="bg-white  p-5 shadow-lg ">
+                    
+                    <form action="#"  onsubmit="sendEmail(); reset(); return false">
+                        <div class="w-full md:w-full md:flex ">
+                            <div class="mb-4  md:inline-block p-2">
+                              <label for="name" class="text-gray-700 mb-2">Name</label>
+                              <input type="text" id="name" name="name" placeholder="Enter your name" class="w-full  px-4 px-4vh h-10 border border-gray-300 rounded box-border" required>
+                            </div>
+                            <div class="mb-4  md:inline-block p-2">
+                              <label for="email" class="text-gray-700 mb-2">Email</label>
+                              <input type="email" id="email" name="email" placeholder="Enter your email" class="w-full px-4  h-10 px-4vh border border-gray-300 rounded box-border" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                            <textarea id="subject" name="subject" placeholder="Subject" class="w-full  py-0.25 px-4 border border-gray-300 rounded box-border" required></textarea>
+                        </div>
+                        <div class="mb-2">
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" placeholder="Enter your text here " class="w-full  h-20   px-4   border border-gray-300 rounded box-border" required></textarea>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <button type="submit" class="  w-1/2 md:w-1/2 bg-pink-600 hover:bg-pink-700 text-white font-semibold text-md tracking-wider py-1 px-2vw rounded-lg border-none">Send Message</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+            
         </div>
-        
-    </header>
-
-    <!--main-->
-    <main>
-        <h2>Contact</h2>
-        <div>
-            <section>
-                <div>
-                    <h4>Location:</h4>
-                    <p>2R2J+M5H, Goro, Ethiopia</p>
-                </div>
-                <div>
-                    <h4>Email:</h4>
-                    <p>addishiwot963@gmail.com</p>
-                </div>
-                <div>
-                    <h4>Call:</h4>
-                    <p>+251 961 256116</p>
-                </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1575.9551525801999!2d38.82808179196432!3d9.000525399929563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b9b6053e87c49%3A0x5752c9d2f249c0ce!2sAbel%20wood%20and%20metal%20manufacturing!5e0!3m2!1sen!2sus!4v1700834094906!5m2!1sen!2sus" width="1850" height=300 style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                
-                
-            </section>
-            <form action="#">
-                <div>
-                    <div>
-                        <label for="name">Your Name</label>
-                        <input type="text" name="name"  id="name" required>
-                    </div>
-                    <div>
-                        <label for="email">Your Email</label>
-                        <input type="email" name="email" id="email" required>
-                    </div>
-                </div>
-                <div>
-                    <label for="subject">Subject</label>
-                    <input type="text"  name="subject" id="subject" required>
-                </div>
-                <div>
-                    <label for="message">Message</label>
-                    <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </main>
-
+    </div>
     <!--footer-->
-    <footer>
-        <p>&copy; Copyright <strong><span>Hiwot</span></strong>. All Rights Reserved</p>
-    </footer>  
+    <footer class="py-4 bg-pink-100">
+        <div class="py-6 text-center">
+            <p  class="text-gray-700">&copy; Copyright 2023 <strong class="has-text-white">Hiwot</strong>. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src=" https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="javascript/script.js"></script>
 </body>
+
 </html>
